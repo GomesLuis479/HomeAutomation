@@ -1,0 +1,66 @@
+// declaring physical connections 
+int fanPin = D2;
+int pumpPin = D5;
+
+// functions to be used
+int controller(String command);
+void fanOn();
+void fanOff();
+void pumpOn();
+void pumpOff();
+
+void setup() {
+ 
+    pinMode(fanPin, OUTPUT);
+    pinMode(pumpPin, OUTPUT);
+    
+    digitalWrite(fanPin, LOW);
+    digitalWrite(pumpPin, LOW);
+    
+    Particle.function("controller", controller);
+}
+
+void loop() {
+    
+}
+
+int controller(String command) {
+    
+    if(command == "fan on") {
+        fanOn();
+    }
+       
+    if(command == "fan off") {
+        fanOff();
+    }
+    
+    if(command == "pump on") {
+        pumpOn();
+    }
+    
+    if(command == "pump off") {
+        pumpOff();
+    }
+    
+    return 0;
+}
+
+void fanOn() {
+    digitalWrite(fanPin, HIGH);
+    Particle.publish("fanWebHook", "1", PRIVATE);
+}
+
+void fanOff() {
+    digitalWrite(fanPin, LOW);
+    Particle.publish("fanWebHook", "0", PRIVATE);
+}
+
+void pumpOn() {
+    digitalWrite(pumpPin, HIGH);
+    Particle.publish("pumpWebHook", "1", PRIVATE);
+}
+
+void pumpOff() {
+    digitalWrite(pumpPin, LOW);
+    Particle.publish("pumpWebHook", "0", PRIVATE);
+}
