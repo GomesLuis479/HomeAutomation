@@ -1,6 +1,6 @@
-# Home Automation
+# Home Automation ([Project Video](https://youtu.be/rRmA0EZAl3k))
 
-A system to control and monitor home appliances was designed. Appliances can be controlled with Google Assistant and status of appliances can be viewed on [Ubidots](https://app.ubidots.com/accounts/signin/). Hardware: Raspberry Pi 3 Model B. Software: Particle Core for Raspberry Pi, Ubidots and IFTTT. [Project Video](https://youtu.be/rRmA0EZAl3k)
+A system to control and monitor home appliances was designed. Appliances can be controlled with Google Assistant and status of appliances can be viewed on [Ubidots](https://app.ubidots.com/accounts/signin/). Hardware: Raspberry Pi 3 Model B. Software: Particle Core for Raspberry Pi, Ubidots and IFTTT.
 
 ## System Overview
 ![](https://github.com/GomesLuis479/HomeAutomation/blob/master/readMe_pics/overview.JPG)
